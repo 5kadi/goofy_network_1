@@ -35,7 +35,7 @@ class Matrix:
             return
         raise Exception("Matrix shape and data size are different")
 
-    def flip(self):
+    def transpose(self):
         new_matrix: list =[]
         for x in range(self.shape[1]):
             vector: list= []
@@ -49,7 +49,7 @@ class Matrix:
         if self.shape[1] == other.shape[0]:
             temp: Matrix = copy(other)
             new_matrix: list = []
-            temp.flip()
+            temp.transpose()
             for self_y in self.matrix:
                 vector: list = []
                 for other_y in temp.matrix:
@@ -61,18 +61,20 @@ class Matrix:
             return Matrix.matrix_init(new_matrix)
         raise Exception("Matrix_1 x should be equal to Matrix_2 y")
     
+    def __sub__(self, other: 'Matrix') -> 'Matrix':
+        if self.shape == other.shape:
+            new_matrix: list = []
+            for y in range(self.shape[0]):
+                vector: list = []
+                for x in range(self.shape[1]):
+                    new_element = self.matrix[y][x] - other.matrix[y][x]
+                    vector.append(new_element)
+                new_matrix.append(vector)
+            return Matrix.matrix_init(new_matrix)
+        raise Exception("Matrix_1 shape should be equal to Matrix_2 shape")
+    
     def __str__(self) -> str:
         return str(self.matrix)
-    
-m1: Matrix = Matrix([1, 2, 3, 4], [2, 2])
-m2: Matrix = Matrix([1, 2, 3, 4, 5, 6], [2, 3])
-m3: Matrix = Matrix.matrix_init([[1], [2]])
-m12: Matrix = m1 @ m2
-m13: Matrix = m1 @ m3
-print(F"{m12}\n{m13}")
-m3.flip()
-m133: Matrix = m13 @ m3
-print(m133)
 
 #FAQ:
 #to multiply Matrix_1 x should be equal to Matrix_2 y
