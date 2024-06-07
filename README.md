@@ -2,7 +2,7 @@
 <ul>
   <li>Just create HiddenLayer(s) as your own Network(inherited from BaseNetwork) class variable(s) and then self.auto_create() (+)</li>
   <li>Easy language, easy implementation (+)</li>
-  <li>High accuracy, lower loss (+)</li>
+  <li>High accuracy, low loss (+)</li>
   <li>Can be slow sometimes (-)</li>
   <li>You may fk up with datatypes (-)</li>
 </ul>
