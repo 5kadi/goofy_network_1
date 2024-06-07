@@ -2,7 +2,7 @@
 <ul>
   <li>Must create your own LayerSequence in new Network class (-)</li>
   <li>Higher loss, lesser accuracy (-)</li>
-  <li>Overall harder language and implmentation<li>
+  <li>Overall harder language and implementation</li>
   <li>Uses Visual C++, Visual Studio 2022 IDE (fuck this shit lmao, --)</li>
   </div>
   <li>Faster speed (+)</li>
