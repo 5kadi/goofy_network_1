@@ -1,6 +1,6 @@
 <h1>GoofyNNetwork/C++</h1>
 <ul>
-  <div style="color🪗">
+  <div style="color:red">
   <li">Must create your own LayerSequence in new Network class (-)</li>
   <li>Higher loss, lesser accuracy (-)</li>
   <li>Overall harder language and implmentation<li>
